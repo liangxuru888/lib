@@ -1,0 +1,11 @@
+{
+	"name": "control-loader",
+	"group": "lib",
+	"version": "0.0.0",
+	"module-type": "module",
+	"description": "html标签模块解析器，查找页面中有data-control的标签，加载相应模块对其进行初始化",
+	"entries": [
+		"index.js",
+		"init-data.js"
+	]
+}
