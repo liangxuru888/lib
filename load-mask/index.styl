@@ -1,0 +1,29 @@
+@import "nib"
+
+.load-mask
+	position: absolute
+	z-index: 999
+	opacity: 1
+	transition: opacity .3s
+	.bg
+		position: absolute
+		left: 0
+		top: 0
+		background-color: #fff
+		opacity: 0.5
+		width: 100%
+		height: 100%
+	.loading-img
+		position: absolute
+		left: 50%
+		top: 50%
+		padding-left: 32px
+		height: 32px
+		margin-left: -16px
+		margin-top: -16px
+		font-size: 16px
+		line-height: 32px
+		white-space: nowrap
+		background: url("loading.gif") no-repeat
+.load-mask-hide
+	opacity: 0

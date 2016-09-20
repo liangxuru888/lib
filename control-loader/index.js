@@ -1,10 +1,7 @@
-var $ = require("jquery");
+var $ = require("zepto");
 var transModName = require("mod-path");
-var Params = require("page-data")("Params");
 var console = require("console");
-var iconfont = require("style/js/iconfont").transBlock;
 require("ecma5");
-require("browser-action");
 require("./init-data");
 
 function parseNode(selector, current){
@@ -140,7 +137,7 @@ function parseControl(container, options){
 					return aliasName;
 				}
 			});
-			data = item.data();
+			data = item.datas();
 			// 解析参数
 			for(paramName in data){
 				paramValue = data[paramName];
@@ -156,11 +153,11 @@ function parseControl(container, options){
 				}
 				commonParams[paramName] = paramValue;
 			}
-			var pageParams;
-			// 解析页面参数
-			if(Params[controlId]){
-				pageParams = Params[controlId];
-			}
+			// var pageParams;
+			// // 解析页面参数
+			// if(Params[controlId]){
+			// 	pageParams = Params[controlId];
+			// }
 			// 解析控件
 			var controls = {},
 				first = true,
@@ -256,9 +253,6 @@ var ControlLoader = module.exports = function(container, options){
 			});
 		}
 	});
-
-	// 解析图标
-	iconfont(container);
 };
 
 ControlLoader.tool = tool;
